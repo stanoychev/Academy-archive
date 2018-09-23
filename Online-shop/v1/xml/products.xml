@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<encapsulator>
+	<product>
+		<ProductName>golf 2</ProductName>
+		<Price>1200.00</Price>
+		<Date>2017-10-18 18:33:11.290</Date>
+		<PaymentMethod>cash</PaymentMethod>
+		<Sale>
+			<PriceReduction>2.1</PriceReduction>
+		</Sale>
+		<ShippingDetails>
+			<DeliveryTime>0</DeliveryTime>
+			<Cost>2</Cost>
+		</ShippingDetails>
+		<Instock>true</Instock>
+		<Categories>
+			<CategoryName>sportni koli</CategoryName>
+		</Categories>
+		<Categories>
+			<CategoryName>vinkeli</CategoryName>
+		</Categories>
+		<Feedbacks>
+			<Comment>ot 0 do 100 za -3 sekundi</Comment>
+			<Rating>10</Rating>
+		</Feedbacks>
+		<Feedbacks>
+			<Comment>zimash i palish</Comment>
+		</Feedbacks>
+	</product>
+	<product>
+		<ProductName>disk na veselin marinov</ProductName>
+		<Price>10000</Price>
+		<Date>2017-10-18 18:33:11.290</Date>
+		<PaymentMethod>kidney</PaymentMethod>
+		<Sale>
+			<PriceReduction>1.88</PriceReduction>
+		</Sale>
+		<ShippingDetails>
+			<DeliveryTime>0</DeliveryTime>
+			<Cost>0</Cost>
+		</ShippingDetails>
+		<Instock>true</Instock>
+		<Categories>
+			<CategoryName>muzika</CategoryName>
+		</Categories>
+		<Categories>
+			<CategoryName>pesni</CategoryName>
+		</Categories>
+		<Feedbacks>
+			<Comment>komentar na edno djudje: s tazi muzika sym izrastnal</Comment>
+			<Rating>10</Rating>
+		</Feedbacks>
+		<Feedbacks>
+			<Comment>produktyt dyrji svetovniq rekord rekord po hvyrlqne na disks</Comment>
+		</Feedbacks>
+	</product>
+	<product>
+		<ProductName>sandali s 4orapi</ProductName>
+		<Price>24.99</Price>
+		<Date>2017-10-18 18:33:11.290</Date>
+		<PaymentMethod>vpay</PaymentMethod>
+		<Sale>
+			<PriceReduction>13.00</PriceReduction>
+		</Sale>
+		<ShippingDetails>
+			<DeliveryTime>1</DeliveryTime>
+			<Cost>2</Cost>
+		</ShippingDetails>
+		<Instock>true</Instock>
+		<Categories>
+			<CategoryName>modern fashion</CategoryName>
+		</Categories>
+		<Categories>
+			<CategoryName>obleklo za intervu za rabota</CategoryName>
+		</Categories>
+		<Feedbacks>
+			<Comment>seki den hodq taka na rabota</Comment>
+			<Rating>9</Rating>
+		</Feedbacks>
+		<Feedbacks>
+			<Comment>edin priqtel go naeha v ofis na microsoft v london, za6toto na intervuto bil sys sandali s 4orapi</Comment>
+		</Feedbacks>
+	</product>
+	</encapsulator>

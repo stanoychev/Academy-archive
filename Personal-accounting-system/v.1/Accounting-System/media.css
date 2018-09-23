@@ -1,0 +1,23 @@
+@media (max-width: 760px) {
+    .wrap-budget-form {
+        width: 80%;
+    }
+
+    .form-control {
+        margin: 0 auto;
+
+    }
+
+    #selectbasic {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    #salary-budget,
+    #payday-budget {
+        width: 190px;
+    }
+}
+

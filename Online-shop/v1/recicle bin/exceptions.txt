@@ -1,0 +1,11 @@
+using (StreamReader cartReader = new StreamReader(@"../../../json/Cart.json"))
+{
+if (context.Carts.ToList().Count != 0)
+//if (!context.Carts.Any(x => x.UserId == 2)) това хвърля ексепшън когато няма юзър с ID=2, при мене са примерно ое 23 до 30, go figure
+{
+string json = cartReader.ReadToEnd();
+var cart = JsonConvert.DeserializeObject<Cart>(json);
+context.Carts.Add(cart);
+context.SaveChanges(); //това адва cart на user с Id = 1, но поради горната причина хвърля ексепшщън
+}
+}

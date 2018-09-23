@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+<head>
+    <!-- CSS -->
+    @Styles.Render("~/Theme/bundle/css")
+</head>
+
+
+<body>
+<div class="text-center text-center">
+    <h1 class="error-number">Oops!</h1>
+    <h2>Something went wrong</h2>
+    <p>
+        We are looking into it. <a href=@Url.Action("Index", "Home")>Take me home!</a>
+    </p>
+
+</div>
+</body>

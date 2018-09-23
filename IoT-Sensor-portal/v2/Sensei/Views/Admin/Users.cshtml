@@ -1,0 +1,55 @@
+﻿@model List<UsersViewModel>
+
+<!-- CSS -->
+@Styles.Render("~/Theme/bundle/datatablescss")
+
+<!-- page content -->
+<div class="right_col" role="main">
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>
+                        <i class="fa fa-users"></i> Users
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+                    </p>
+                    <table id="datatable" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th><i class="fa fa-id-card"></i> ID</th>
+                                <th><i class="fa fa-user-circle-o"></i> Username</th>
+                                <th><i class="fa fa-envelope"></i> Email</th>
+                                <th><i class="fa fa-adjust"> </i> Role (Togglable)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in Model)
+                            {
+                                <tr>
+                                    <td>@user.User.Id</td>
+                                    <td>@user.User.UserName</td>
+                                    <td>@user.User.Email</td>
+                                    @Html.Partial("AdminPartialViews/_Toggle", user)
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/Theme/bundle/datatablesjs")
+    @Scripts.Render("~/bundles/jqueryajax")
+}

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Maze runner", "ConsoleApp1\01. Maze runner.csproj", "{5C4114CB-33C4-4393-9383-DCEC03485EA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Paper cutter", "ConsoleApp2\02. Paper cutter.csproj", "{9FE9D197-A818-4C3C-8BB4-B4E4E94EB980}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Spell caster", "ConsoleApp3\03. Spell caster.csproj", "{116799B0-4947-40DC-B76B-25D77EF60703}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C4114CB-33C4-4393-9383-DCEC03485EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C4114CB-33C4-4393-9383-DCEC03485EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C4114CB-33C4-4393-9383-DCEC03485EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C4114CB-33C4-4393-9383-DCEC03485EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE9D197-A818-4C3C-8BB4-B4E4E94EB980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE9D197-A818-4C3C-8BB4-B4E4E94EB980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE9D197-A818-4C3C-8BB4-B4E4E94EB980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE9D197-A818-4C3C-8BB4-B4E4E94EB980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116799B0-4947-40DC-B76B-25D77EF60703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116799B0-4947-40DC-B76B-25D77EF60703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116799B0-4947-40DC-B76B-25D77EF60703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116799B0-4947-40DC-B76B-25D77EF60703}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

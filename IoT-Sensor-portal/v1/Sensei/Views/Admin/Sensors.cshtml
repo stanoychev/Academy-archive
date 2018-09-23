@@ -1,0 +1,64 @@
+﻿@model List<SensorDisplayData>
+
+<!-- CSS -->
+@Styles.Render("~/Theme/bundle/datatablescss")
+
+<!-- page content -->
+<div class="right_col" role="main">
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>
+                        <i class="fa fa-rocket"></i> Sensors
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+                    </p>
+                    <table id="datatable" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th><i class="fa fa-id-card"></i> ID</th>
+                                <th><i class="fa fa-microchip"></i> Name</th>
+                                <th><i class="fa fa-user-circle-o"></i> Created By</th>
+                                <th><i class="fa fa-tag"> </i> Tag</th>
+                                <th><i class="fa fa-trash"></i> Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var sensor in Model)
+                            {
+                                <tr id=@sensor.SensorId>
+                                    <td>@sensor.SensorId</td>
+                                    <td>@sensor.SensorName</td>
+                                    <td>@sensor.UserName</td>
+                                    <td>@sensor.SensorTag</td>
+                                    <td>
+                                        <b>
+                                            @Ajax.ActionLink("Delete", "DeleteSensor", new { sensorId = sensor.SensorId },
+                                                new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = sensor.SensorId.ToString() })
+                                        </b>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    @Scripts.Render("~/Theme/bundle/datatablesjs")
+    @Scripts.Render("~/bundles/jqueryajax")
+}
+
+

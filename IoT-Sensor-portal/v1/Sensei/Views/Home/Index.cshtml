@@ -1,0 +1,89 @@
+﻿@model Sensei.ViewModels.StatsViewModel
+
+
+<div class="right_col" role="main">
+    <div class="row tile_count">
+        <!-- top tiles -->
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-users"></i> Total Users</span>
+            <div class="count">@Model.UsersCount</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-microchip"></i> Total Sensors</span>
+            <div class="count green">@Model.SensorsCount</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Public Sensors</span>
+            <div class="count green">@Model.PublicSensorsCount</div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user-secret"></i> Private Sensors</span>
+            <div class="count green">@Model.PrivateSensorsCount</div>
+        </div>
+    </div>
+    <!-- /top tiles -->
+    <!-- Content -->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>
+                        <i class="fa fa-cube"></i> Welcome to Sensei - The IoT Sensor Portal!
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div>
+                        <img style="float: left; width: 220px" src=@Url.Content("~/Images/sensei.png")>
+                        <h4>- Sensei is an <a href="https://github.com/TeamRocketICB/ICB-Teamwork/commits/master" class="green">open source</a> sensor data visualizer.</h4>
+                        
+                        <h4>- Free as in freedom.</h4>
+
+                        <h4>- Hosted on powerful azure servers.</h4>
+
+                        <h4>- 99.99% uptime.</h4>
+
+                        <h4>- Real time graph visualization, history and notifications for your sensors.</h4>
+
+                        <h4>- Responsive mobile friendly design.</h4>
+                        
+                        <h4>- Fast response times.</h4>
+                        
+                        <h4>- One of it's kind.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>
+                        <i class="fa fa-newspaper-o"></i> News
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div>
+                        <h3>
+                            Still in development process, expect us soon!
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content -->
+</div>

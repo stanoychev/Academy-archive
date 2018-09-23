@@ -1,0 +1,188 @@
+﻿@model RegisterNewSensor
+
+<!-- CSS -->
+@Styles.Render("~/Theme/bundle/datatablescss")
+
+<!-- page content -->
+<div class="right_col" role="main">
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>
+                        <i class="fa fa-ship"></i> Sensors Provided By ICB
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+                    </p>
+                    <table id="datatable" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th><i class="fa fa-id-card"></i> ICB Sensor ID</th>
+                                <th><i class="fa fa-tag"></i> Tag</th>
+                                <th><i class="fa fa-bar-chart"></i> Operating Range</th>
+                                <th><i class="fa fa-minus"></i> Minimum Polling Interval</th>
+                                <th><i class="fa fa-thermometer-full"></i> Measurement Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (APISensorType sensor in Model.AvailableSensors)
+                            {
+                                <tr id="@sensor.Tag">
+                                    <td class="sensorId">@sensor.SensorId</td>
+                                    <td>@sensor.Tag</td>
+                                    <td class="sensorDescription">@sensor.Description</td>
+                                    <td class="minPollingInterval">@sensor.MinPollingIntervalInSeconds</td>
+                                    <td class="measurementType">@sensor.MeasureType</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>
+                        <i class="fa fa-cubes"></i> Register Sensor
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li>
+                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    @using (Html.BeginForm("RegisterNewSensor", "Sensor", FormMethod.Post, new { @class = "form-horizontal form-label-left", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @*@Html.HiddenFor(m => m.LastValue)*@
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                @Html.LabelFor(m => m.Tag)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.DropDownListFor(m => m.Tag, new SelectList(Model.AvailableSensors.Select(x => x.Tag)), "Select from avaible sensors", new { htmlAttributes = new { @class = "select2_single form-control col-md-7 col-xs-12" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                @Html.LabelFor(m => m.UserDefinedSensorName)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.TextBoxFor(m => m.UserDefinedSensorName, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                @Html.LabelFor(m => m.SensorIdICB)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.TextBoxFor(m => m.SensorIdICB, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" }, @readonly = "readonly" })
+                            </div>
+                        </div>
+
+                        //Not nessesery anymore
+                        @*<div class="form-group">
+                            <label class="control-label col-md-3">
+                                @Html.LabelFor(m => m.Sensor.OperatingRange)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.TextBoxFor(m => m.Sensor.OperatingRange, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" }, @readonly = "readonly" })
+                            </div>
+                        </div>*@
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                @Html.LabelFor(m => m.UserDefinedMinValue)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.TextBoxFor(m => m.UserDefinedMinValue, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                @Html.LabelFor(m => m.UserDefinedMaxValue)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.TextBoxFor(m => m.UserDefinedMaxValue, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                            </div>
+                        </div>
+
+                        @*<div class="form-group">
+                            <label class="control-label col-md-3">
+                                @Html.LabelFor(m => m.Sensor.MeasurementType)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.TextBoxFor(m => m.Sensor.MeasurementType, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" }, @readonly = "readonly" })
+                            </div>
+                        </div>*@
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                <span class="text-danger pull-left">
+                                    @Html.ValidationMessageFor(m => m.PollingInterval)
+                                </span>
+                                @Html.LabelFor(m => m.PollingInterval)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.TextBoxFor(m => m.PollingInterval, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                @Html.LabelFor(m => m.IsPublic)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.CheckBoxFor(m => m.IsPublic, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                @Html.LabelFor(m => m.UserDefinedDescription)
+                            </label>
+                            <div class="col-md-7">
+                                @Html.TextAreaFor(m => m.UserDefinedDescription, new { htmlAttributes = new { @class = "form-control col-md-7 col-xs-12" } })
+                            </div>
+                        </div>
+
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                <button class="btn btn-primary collapse-link" type="button">Cancel</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/Theme/bundle/datatablesjs")
+    @Scripts.Render("~/bundles/jqueryajax")
+    @Scripts.Render("~/bundles/registerNewSensor")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

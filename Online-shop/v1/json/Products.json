@@ -1,0 +1,35 @@
+[{
+	"ProductName": "vodki",
+	"Price": "12.00",
+	"Date": "2017-10-18 18:33:11.290",
+	"PaymentMethod": "0",
+	"Sale" : { "PriceReduction" : "0.1" },		
+	"ShippingDetails": { "DeliveryTime" : "7", "Cost" : "2" },
+	"Instock": "true",
+	"Categories" : [ { "CategoryName" : "leko piene" }, {"CategoryName" : "za ribolov"} ],
+	"Feedbacks" : [ { "Comment" : "boli glava", "Rating" : "6" }, {"Comment" : "poveche nqma da piq"} ]
+},
+
+{
+	"ProductName": "masti4ki",
+	"Price": "2",
+	"Date": "2017-10-18 18:33:11.290",
+	"PaymentMethod": "1",
+	"Sale" : { "PriceReduction" : "12.88" },		
+	"ShippingDetails": { "DeliveryTime" : "0", "Cost" : "0" },
+	"Instock": "true",
+	"Categories" : [ { "CategoryName" : "qko piene" }, {"CategoryName" : "za vseki den"} ],
+	"Feedbacks" : [ { "Comment" : "byrzo se socializiram", "Rating" : "10" }, {"Comment" : "poveche nqma da piq"} ]
+},
+
+{
+	"ProductName": "rakiiki",
+	"Price": "12.19",
+	"Date": "2017-10-18 18:33:11.290",
+	"PaymentMethod": "2",
+	"Sale" : { "PriceReduction" : "73.00" },
+	"ShippingDetails": { "DeliveryTime" : "17", "Cost" : "22" },
+	"Instock": "true",
+	"Categories" : [ { "CategoryName" : "prosto piene" }, {"CategoryName" : "za kuponi"} ],
+	"Feedbacks" : [ { "Comment" : "julime seki den", "Rating" : "9" }, {"Comment" : "poveche nqma da piq"} ]
+}]

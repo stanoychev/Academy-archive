@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Product>
+	<PaymentMethodEnum>PaymentMethodEnum.Cash</PaymentMethodEnum>
+	<Price>500</Price>
+	<ProductName>Samsung Galaxy S6</ProductName>
+	<SellerId>1</SellerId>
+	<ShippingDetails>
+		<Cost>27</Cost>
+	</ShippingDetails>
+</Product>

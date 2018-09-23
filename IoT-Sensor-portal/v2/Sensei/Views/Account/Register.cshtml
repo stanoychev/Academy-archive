@@ -1,0 +1,87 @@
+﻿@using System.Web.UI.WebControls
+@model RegisterViewModel
+
+@{
+    Layout = null;
+}
+
+<head>
+    <!-- CSS -->
+    @Styles.Render("~/Theme/bundle/css")
+</head>
+
+<body class="login">
+    <div>
+        <a class="hiddenanchor" id="signup"></a>
+
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <h1>Register Form</h1>
+                        <div>
+                            @if (!ViewData.ModelState.IsValid)
+                            {
+                                <span class="pull-left text-danger">Email or username already in use.</span>
+                            }
+                            <span class="text-danger pull-left">
+                                @Html.ValidationMessageFor(m => m.Email)
+                            </span>
+                            @Html.TextBoxFor(m => m.Email, new {@class = "form-control", placeholder = "Email"})
+                        </div>
+                        <div>
+                            <span class="text-danger pull-left">
+                                @Html.ValidationMessageFor(m => m.Username)
+                            </span>
+                            @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "Username" })
+                        </div>
+                        <div>
+                            <span class="text-danger pull-left">
+                                @Html.ValidationMessageFor(m => m.Password)
+                            </span>
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                        </div>
+                        <div>
+                            <span class="text-danger pull-left">
+                                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                            </span>
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm Password" })
+                        </div>
+                        <div>
+                            <div class="g-recaptcha" data-theme="light" data-sitekey="6LfRGjcUAAAAAC3cPcrF1BCGDbZlgUcxZiq7ANXG"></div>
+                        </div>
+                        <br />
+                        <p>
+                            <input type="submit" class="btn btn-default submit" value="Register">
+                            <a class="btn btn-mini" href="#">Lost your password?</a>
+                        </p>
+
+                        <div class="clearfix"></div>
+
+                        <div class="separator">
+                            <p class="change_link">
+                                Aready have an account?
+                                <a href=@Url.Action("Login", "Account")> Login!</a>
+                            </p>
+
+                            <div class="clearfix"></div>
+                            <br />
+                            <div>
+                                <a href=@Url.Action("Index", "Home")><h1><i class="fa fa-microchip"></i> Sensei - The IoT Sensor Portal</h1></a>
+                                <p>© @DateTime.Now.Year All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    }
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/Theme/bundle/js")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/recaptcha")
+</body>

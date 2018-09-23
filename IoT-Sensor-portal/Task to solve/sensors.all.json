@@ -1,0 +1,93 @@
+[
+    {
+        "sensorId": "f1796a28-642e-401f-8129-fd7465417061",
+        "tag": "TemperatureSensor1",
+        "description": "This sensor will return values between 15 and 28",
+        "minPollingIntervalInSeconds": 40,
+        "measureType": "°C"
+    },
+    {
+        "sensorId": "81a2e1b1-ea5d-4356-8266-b6b42471653e",
+        "tag": "TemperatureSensor2",
+        "description": "This sensor will return values between 6 and 18",
+        "minPollingIntervalInSeconds": 30,
+        "measureType": "°C"
+    },
+    {
+        "sensorId": "92f7dc9a-f2fe-4b60-82f5-400e42f099b4",
+        "tag": "TemperatureSensor3",
+        "description": "This sensor will return values between 19 and 23",
+        "minPollingIntervalInSeconds": 70,
+        "measureType": "°C"
+    },
+    {
+        "sensorId": "216fc1e7-1496-4532-b9ee-29565b865ad6",
+        "tag": "HumiditySensor1",
+        "description": "This sensor will return values between 0 and 60",
+        "minPollingIntervalInSeconds": 40,
+        "measureType": "%"
+    },
+    {
+        "sensorId": "61ff0614-64fd-4842-9a05-0b1541d2cc61",
+        "tag": "HumiditySensor2",
+        "description": "This sensor will return values between 10 and 90",
+        "minPollingIntervalInSeconds": 50,
+        "measureType": "%"
+    },
+    {
+        "sensorId": "08503c1c-963f-4106-9088-82fa67d34f9d",
+        "tag": "ElectricPowerConsumtionSensor1",
+        "description": "This sensor will return values between 1000 and 5000",
+        "minPollingIntervalInSeconds": 70,
+        "measureType": "W"
+    },
+    {
+        "sensorId": "1f0ef0ff-396b-40cb-ac3d-749196dee187",
+        "tag": "ElectricPowerConsumtionSensor2",
+        "description": "This sensor will return values between 500 and 3500",
+        "minPollingIntervalInSeconds": 105,
+        "measureType": "W"
+    },
+    {
+        "sensorId": "4008e030-fd3a-4f8c-a8ca-4f7609ecdb1e",
+        "tag": "OccupancySensor1",
+        "description": "This sensor will return true or false value",
+        "minPollingIntervalInSeconds": 50,
+        "measureType": "(true/false)"
+    },
+    {
+        "sensorId": "7a3b1db5-959d-46ce-82b6-517773327427",
+        "tag": "OccupancySensor2",
+        "description": "This sensor will return true or false value",
+        "minPollingIntervalInSeconds": 80,
+        "measureType": "(true/false)"
+    },
+    {
+        "sensorId": "a3b8a078-0409-4365-ace6-6f8b5b93d592",
+        "tag": "DoorSensor1",
+        "description": "This sensor will return true or false value",
+        "minPollingIntervalInSeconds": 90,
+        "measureType": "(true/false)"
+    },
+    {
+        "sensorId": "ec3c4770-5d57-4d81-9c83-a02140b883a1",
+        "tag": "DoorSensor2",
+        "description": "This sensor will return true or false value",
+        "minPollingIntervalInSeconds": 50,
+        "measureType": "(true/false)"
+    },
+    {
+        "sensorId": "d5d37a46-8ab5-41ec-b7d5-d28c2fd68d3d",
+        "tag": "NoiseSensor1",
+        "description": "This sensor will return values between 20 and 70",
+        "minPollingIntervalInSeconds": 40,
+        "measureType": "dB"
+    },
+    {
+        "sensorId": "65d98ff7-b524-49de-8d13-f85753d98858",
+        "tag": "NoiseSensor2",
+        "description": "This sensor will return values between 40 and 90",
+        "minPollingIntervalInSeconds": 85,
+        "measureType": "dB"
+    }
+]

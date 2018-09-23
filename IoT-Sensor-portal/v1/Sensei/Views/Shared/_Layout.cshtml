@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sensei</title>
+
+    <!-- CSS -->
+    @Styles.Render("~/Theme/bundle/css")
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title">
+                        <a href=@Url.Action("Index", "Home") class="site_title text-center"><i class="fa fa-microchip"></i><span> Sensei</span></a>
+                        <div class="text-center">The IoT Sensor Portal</div>
+                    </div>
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href=@Url.Action("Index", "Home")><i class="fa fa-home"></i> Home </a>
+                                </li>
+                                <li>
+                                    <a href=@Url.Action("About", "Home")><i class="fa fa-file-text"></i> About </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_section">
+                            <h3>Sensors</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href=@Url.Action("ListAllPublicSensors", "Sensor")><i class="fa fa-tachometer "></i> Public </a>
+                                </li>
+                                @if (User.IsInRole("User"))
+                                {
+                                    <li>
+                                        <a href=@Url.Action("ListPersonalSensors", "Sensor")><i class="fa fa-user-secret"></i> Personal </a>
+                                    </li>
+                                    <li>
+                                        <a href=@Url.Action("SharedSensors", "Sensor")><i class="fa fa-share-alt-square"></i> Shared </a>
+                                    </li>
+                                    <li>
+                                        <a><i class="fa fa-bolt"></i> Actions <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li> <a href=@Url.Action("RegisterNewSensor", "Sensor")> Add </a></li>
+                                            <li> <a href=@Url.Action("ModifySensors", "Sensor")> Modify </a></li>
+                                        </ul>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <div class="menu_section">
+                                <h3>Administration</h3>
+                                <ul class="nav side-menu">
+                                    <li>
+                                        <a href=@Url.Action("Users", "Admin")><i class="fa fa-users"></i> Users </a>
+                                    </li>
+                                    <li>
+                                        <a href=@Url.Action("Sensors", "Admin")><i class="fa fa-rocket"></i> Sensors </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+
+                    </div>
+                    <!-- /sidebar menu -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            @Html.Partial("_LoginPartial")
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            @RenderBody()
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    Sensei - The IoT Sensor Portal. © @DateTime.Now.Year All Rights Reserved.
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+    <!-- JS -->
+    @Scripts.Render("~/Theme/bundle/js")
+    @RenderSection("additional", required: false)
+    @RenderSection("scripts", required: false)
+</body>
+</html>

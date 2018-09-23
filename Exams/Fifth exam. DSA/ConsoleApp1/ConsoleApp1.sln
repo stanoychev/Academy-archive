@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aquapark 100", "ConsoleApp4\Aquapark 100.csproj", "{78EE9E14-4BEB-44D3-B4C0-4294FFEF935C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order System 100", "ConsoleApp9\Order System 100.csproj", "{7B2049C1-AF6D-42CC-8B2B-B35465A6614E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78EE9E14-4BEB-44D3-B4C0-4294FFEF935C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78EE9E14-4BEB-44D3-B4C0-4294FFEF935C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78EE9E14-4BEB-44D3-B4C0-4294FFEF935C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78EE9E14-4BEB-44D3-B4C0-4294FFEF935C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2049C1-AF6D-42CC-8B2B-B35465A6614E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2049C1-AF6D-42CC-8B2B-B35465A6614E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2049C1-AF6D-42CC-8B2B-B35465A6614E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2049C1-AF6D-42CC-8B2B-B35465A6614E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

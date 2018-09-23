@@ -1,0 +1,16 @@
+﻿@model UsersViewModel
+
+<td id="@Model.User.Id">
+    @if (Model.Role == "Admin")
+    {
+        <i class="fa fa-circle"></i>
+    }
+    else
+    {
+        <i class="fa fa-circle-o"></i>
+    }
+    <b>
+    @Ajax.ActionLink(@Model.Role == "Admin" ? "Admin" : "User", "ToggleRole", new { userId = Model.User.Id },
+    new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = Model.User.Id })
+    </b>
+</td>

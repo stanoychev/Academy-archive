@@ -1,0 +1,14 @@
+13
+AddOrder IdeaPad Z560;1536.50;Ivan
+AddOrder ThinkPad T410;3000;Ivan
+AddOrder VAIO Z13;4099.99;Pesho
+AddOrder CLS 63 AMG;200000;Gosho
+AddOrder 320i;10000;Tosho
+AddOrder G560;999;Ivan
+FindOrdersByConsumer Ivan
+DeleteOrders Ivan
+FindOrdersByConsumer Ivan
+FindOrdersByConsumer Pesho
+FindOrdersByConsumer Gosho
+FindOrdersByConsumer Tosho
+FindOrdersByPriceRange 100000;200000

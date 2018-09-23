@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+<head>
+    <!-- CSS -->
+    @Styles.Render("~/Theme/bundle/css")
+</head>
+
+<body>
+    <div class="text-center text-center">
+        <h1 class="error-number">403</h1>
+        <h2>Access denied.</h2>
+        <p>
+            Full authentication is required to access this resource. <a href=@Url.Action("Index", "Home")>Take me home!</a>
+        </p>
+
+    </div>
+</body>

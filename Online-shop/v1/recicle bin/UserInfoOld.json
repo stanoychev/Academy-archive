@@ -1,0 +1,9 @@
+{
+	"ProductName": "Samsung Galaxy S6 Edge",
+	"Price": "560",
+	"PaymentMethodEnum": "Cash",
+	"ShippingDetails": {
+		"Cost": "20"
+	},
+	"SellerId": "1"
+}

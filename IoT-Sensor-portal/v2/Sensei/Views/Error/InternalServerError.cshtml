@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+<head>
+    <!-- CSS -->
+    @Styles.Render("~/Theme/bundle/css")
+</head>
+
+<body>
+    <div class="text-center text-center">
+        <h1 class="error-number">500</h1>
+        <h2>Internal Server Error</h2>
+        <p>
+            We track these errors automatically. In the meantime, try refreshing. <a href=@Url.Action("Index", "Home")>Take me home!</a>
+        </p>
+
+    </div>
+</body>
